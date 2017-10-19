@@ -20,12 +20,21 @@ opkg update
 opkg install rp-pppoe-server
 ```
 
-方法二(路由器无法上网，自行下载对应ipk，这里以tengda-ac9为例)：
+方法二
+
+* (1)手机开热点
+后台进入`网络`-`无线`，扫描热点并填入密码
+之后按照`方法一`操作
+
+* （2）路由器无法上网，自行下载对应ipk，这里以tengda-ac9为例：
 ```sh
 opkg install rp-pppoe-common_3.12-1_arm_cortex-a9.ipk
 opkg install rp-pppoe-server_3.12-1_arm_cortex-a9.ipk
 ```
-#### 3.运行nk4conf.sh。
+#### 3.将三个文件中的`netkeeper`全部替换为`wan`
+（建议使用Notepad++等软件，记事本编码可能会出现问题）
+
+#### 4.运行nk4conf.sh。
 ```sh
 sh nk4conf.sh
 ```
